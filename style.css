@@ -1,0 +1,63 @@
+
+
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: sans-serif;
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    background-color: aquamarine;
+}
+
+.container{
+    text-align: center;
+}
+
+.progress-container {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    margin-bottom: 30px;
+    max-width: 100%;
+    width: 350px;
+}
+
+.progress {
+    /* background-color: #d3d3d3; */
+    height: 4px;
+    width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: -1;
+    display: flex; /* Add this line to make the circles flex items */
+    justify-content: space-between; /* This will distribute the circles evenly */
+    align-items: center; /* This will center the circles vertically */
+}
+
+.circle {
+    background-color: white;
+    color: #333;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid #d3d3d3;
+    z-index: 1;
+}
+
+.active {
+    border-color: #3498db;
+    color: white;
+    background-color: #3498db;
+}
